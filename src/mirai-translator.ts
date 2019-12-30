@@ -46,7 +46,7 @@ export function translate(textToBeTranslated: string | undefined, source: Langua
                     console.log("Received body: ", body);
                     const jsonBody = JSON.parse(body);
                     if (jsonBody.status !== 'success') {
-                        throw new Error("Received error status from Mirai Translate");
+                        throw new Error("Received error status from Mirai Translator");
                     }
 
                     vscode.window.showInformationMessage(jsonBody.outputs[0].output);

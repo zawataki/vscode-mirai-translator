@@ -12,5 +12,5 @@ Initial release
 ### Added
 - A command to translate English text to Japanese using [みらい翻訳](https://miraitranslate.com/trial/). The command shows in the Command Palette of Visual Studio Code.
 
-[Unreleased]: https://github.com/zawataki/vscode-mirai-translate/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/zawataki/vscode-mirai-translate/releases/tag/v1.0.0
+[Unreleased]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/zawataki/vscode-mirai-translator/releases/tag/v1.0.0

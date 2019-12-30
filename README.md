@@ -1,6 +1,6 @@
 # みらい翻訳 for VS Code
 
-Translate English text to Japanese using [みらい翻訳] (Mirai Translate) from VS Code.
+Translate English text to Japanese using [みらい翻訳] (Mirai Translator) from VS Code.
 
 ![demo](images/demo.gif)
 
@@ -8,7 +8,7 @@ Translate English text to Japanese using [みらい翻訳] (Mirai Translate) fro
 
 ## Features
 
-- Translation English text you selected to Japanese using [みらい翻訳] by the command on Command Palette. The command title is `Translate from English to Japanese using Mirai Translate`.
+- Translation English text you selected to Japanese using [みらい翻訳] by the command on Command Palette. The command title is `Translate from English to Japanese using Mirai Translator`.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ Nothing.
 
 ## Known Issues
 
-See [issues](https://github.com/zawataki/vscode-mirai-translate/issues).
+See [issues](https://github.com/zawataki/vscode-mirai-translator/issues).
 
 ## Release Notes
 
