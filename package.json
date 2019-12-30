@@ -3,6 +3,7 @@
 	"displayName": "Mirai Translator",
 	"description": "Translate by Mirai Translator",
 	"version": "0.0.1",
+	"publisher": "zawataki",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
