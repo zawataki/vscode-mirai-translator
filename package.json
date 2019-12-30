@@ -8,6 +8,10 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zawataki/vscode-mirai-translator"
+	},
 	"categories": [
 		"Other"
 	],
