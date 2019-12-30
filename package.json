@@ -2,7 +2,7 @@
 	"name": "mirai-translate",
 	"displayName": "Mirai Translate",
 	"description": "Translate by Mirai Translate",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
