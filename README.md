@@ -21,7 +21,7 @@ Translate English text to Japanese using [みらい翻訳] (Mirai Translator) fr
 
 Internet connection to [みらい翻訳].
 
-> [みらい翻訳]のWebページに繋がるインターネット環境。
+> [みらい翻訳] のWebページに繋がるインターネット環境。
 
 ## Extension Settings (拡張機能の設定)
 
