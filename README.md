@@ -1,5 +1,8 @@
 # みらい翻訳 for VS Code
 
+[![Version](https://vsmarketplacebadge.apphb.com/version/zawa.mirai-translator.svg)](https://marketplace.visualstudio.com/items?itemName=zawa.mirai-translator)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/zawa.mirai-translator.svg)](https://marketplace.visualstudio.com/items?itemName=zawa.mirai-translator)
+
 Translate English text to Japanese using [みらい翻訳] (Mirai Translator) from VS Code.
 
 > [みらい翻訳] （高精度な機械翻訳サービス）を使って英語のテキストを日本語に翻訳するための Visual Studio Code拡張機能です。
