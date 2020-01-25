@@ -23,6 +23,18 @@ jobs:
       run: |
         /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
         echo ">>> Started xvfb"
+
+    - name: Set up dotnet command for Windows Server
+      if: startsWith(matrix.os, 'windows-')
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.100'
+    - name: Install TypeScript for Windows Server
+      if: startsWith(matrix.os, 'windows-')
+      run: |
+        dotnet add package Microsoft.TypeScript.MSBuild --version 3.7.3
+        dotnet add package Microsoft.TypeScript.Compiler --version 3.1.5
+
     - name: Install, build, and test
       run: |
         yarn install --frozen-lockfile
