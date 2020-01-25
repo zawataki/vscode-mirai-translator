@@ -23,7 +23,8 @@ jobs:
         echo ">>> Started xvfb"
     - name: Install, build, and test
       run: |
-        export DISPLAY="${DISPLAY:-:0}" # See https://senooken.jp/post/2016/06/08/
         yarn install --frozen-lockfile
         yarn pretest
         yarn test
+      env:
+        DISPLAY: ':99.0'
