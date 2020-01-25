@@ -26,3 +26,5 @@ jobs:
         yarn install --frozen-lockfile
         yarn pretest
         yarn test
+      env:
+        DISPLAY: ':99.0'
