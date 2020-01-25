@@ -26,7 +26,7 @@ jobs:
 
     - name: Set up TypeScript compiler for Windows
       if: startsWith(matrix.os, 'windows-')
-      uses: icrawl/action-tsc@v1
+      run: npm install -g typescript
 
     - name: Install, build, and test
       run: |
