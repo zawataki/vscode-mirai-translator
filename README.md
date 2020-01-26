@@ -3,6 +3,7 @@
 [![Version](https://vsmarketplacebadge.apphb.com/version/zawa.mirai-translator.svg)](https://marketplace.visualstudio.com/items?itemName=zawa.mirai-translator)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/zawa.mirai-translator.svg)](https://marketplace.visualstudio.com/items?itemName=zawa.mirai-translator)
 [![CI status on GitHub Actions](https://github.com/zawataki/vscode-mirai-translator/workflows/Build%20and%20Test/badge.svg)](https://github.com/zawataki/vscode-mirai-translator/actions?query=workflow%3A%22Build+and+Test%22+branch%3Amaster)
+[![CI status on Azure Pipelines](https://dev.azure.com/zawa640567/VS%20Code/_apis/build/status/zawataki.vscode-mirai-translator?branchName=master)](https://dev.azure.com/zawa640567/VS%20Code/_build/latest?definitionId=1&branchName=master)
 
 Translate English text to Japanese using [みらい翻訳] (Mirai Translator) from VS Code.
 
