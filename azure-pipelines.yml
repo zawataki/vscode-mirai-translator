@@ -3,12 +3,12 @@ trigger:
 
 strategy:
   matrix:
-    linux:
-      imageName: 'ubuntu-16.04'
-    mac:
-      imageName: 'macos-10.13'
-    windows:
-      imageName: 'vs2017-win2016'
+    Linux:
+      imageName: 'ubuntu-18.04'
+    macOS:
+      imageName: 'macos-10.14'
+    Windows:
+      imageName: 'windows-2019'
 
 pool:
   vmImage: $(imageName)
@@ -17,7 +17,7 @@ steps:
 
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: 10.x'
   displayName: 'Install Node.js'
 
 - bash: |
