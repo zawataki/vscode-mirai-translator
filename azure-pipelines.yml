@@ -2,6 +2,7 @@ trigger:
 - master
 
 strategy:
+  parallel: 10
   matrix:
     Linux:
       imageName: 'ubuntu-18.04'
