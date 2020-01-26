@@ -2,7 +2,6 @@ trigger:
 - master
 
 strategy:
-  maxParallel: 10
   matrix:
     Linux:
       imageName: 'ubuntu-18.04'
