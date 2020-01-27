@@ -30,12 +30,10 @@ steps:
   condition: and(succeeded(), eq(variables['Agent.OS'], 'Linux'))
 
 - bash: |
-    echo ">>> Compile vscode-test"
+    echo ">>> Compile"
     yarn && yarn compile
-    echo ">>> Compiled vscode-test"
-    cd sample
-    echo ">>> Run sample integration test"
-    yarn && yarn compile && yarn test
+    echo ">>> Run tests"
+    yarn test
   displayName: Run Tests
   env:
     DISPLAY: ':99.0'
