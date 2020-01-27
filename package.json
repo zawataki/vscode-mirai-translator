@@ -32,7 +32,8 @@
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "yarn run compile",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"deploy": "vsce publish --yarn"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -43,6 +44,7 @@
 		"mocha": "^6.2.2",
 		"tslint": "^5.20.0",
 		"typescript": "^3.6.4",
+		"vsce": "^1.71.0",
 		"vscode-test": "^1.2.2"
 	},
 	"dependencies": {
