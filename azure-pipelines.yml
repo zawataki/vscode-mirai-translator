@@ -1,5 +1,8 @@
 trigger:
-- master
+  branches:
+    include: ['*']
+  tags:
+    include: ['*']
 
 strategy:
   matrix:
@@ -27,12 +30,26 @@ steps:
   condition: and(succeeded(), eq(variables['Agent.OS'], 'Linux'))
 
 - bash: |
-    echo ">>> Compile vscode-test"
+    echo ">>> Compile"
     yarn && yarn compile
-    echo ">>> Compiled vscode-test"
-    cd sample
-    echo ">>> Run sample integration test"
-    yarn && yarn compile && yarn test
+    echo ">>> Run tests"
+    yarn test
   displayName: Run Tests
   env:
     DISPLAY: ':99.0'
+
+- bash: |
+    if echo "$SOURCE_BRANCH" | grep -E '^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+$' ; then
+      echo ">>> Publish"
+      yarn deploy -p $PERSONAL_ACCESS_TOKEN
+    else
+      echo ">>> The tag format is invalid so skip the publish for the tag '$SOURCE_BRANCH'"
+    fi
+  displayName: Publish
+  condition: |
+    and(succeeded(),
+      startsWith(variables['Build.SourceBranchName'], 'master'),
+      startsWith(variables['Build.SourceBranch'], 'refs/tags/'),
+      eq(variables['Agent.OS'], 'Linux'))
+  env:
+    SOURCE_BRANCH: $(Build.SourceBranch)
