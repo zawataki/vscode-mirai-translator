@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Remove extra condition of deploy step on CI.
+
+## [1.0.6] - 2020-01-30
+Remove extra condition of deploy step on CI.
 
 ## [1.0.5] - 2020-01-28
 - Add CI/CD to automate build, test, and deployment.
@@ -29,7 +31,8 @@ Initial release
 ### Added
 - A command to translate English text to Japanese using [みらい翻訳](https://miraitranslate.com/trial/). The command shows in the Command Palette of Visual Studio Code.
 
-[Unreleased]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.0.2...v1.0.3
