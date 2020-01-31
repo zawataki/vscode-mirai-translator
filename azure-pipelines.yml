@@ -40,6 +40,9 @@ steps:
 
 - bash: |
     if echo "$SOURCE_BRANCH" | grep -E '^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+$' ; then
+      echo ">>> Remove the line containing GitHub Actions status badge because avoid this issue https://github.com/zawataki/vscode-mirai-translator/issues/10"
+      grep -v 'CI status on GitHub Actions' README.md > README.md.tmp && mv -f README.md.tmp README.md
+
       echo ">>> Publish"
       yarn deploy -p $(PERSONAL_ACCESS_TOKEN)
     else
