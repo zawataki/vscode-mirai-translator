@@ -15,9 +15,9 @@ Translate English text to Japanese using [みらい翻訳] (Mirai Translator) fr
 
 ## Features (機能)
 
-- Translation English text you selected to Japanese using [みらい翻訳] by the command on Command Palette. The command title is `Translate from English to Japanese using Mirai Translator`.
+- Translation English text you selected to Japanese using [みらい翻訳] by the command on Command Palette. The command title is `Translate English to Japanese using Mirai Translator`.
 
-> - 選択した範囲の英語を日本語に翻訳（選択した状態でコマンドパレットの`Translate from English to Japanese using Mirai Translator`を実行）
+> - 選択した範囲の英語を日本語に翻訳（選択した状態でコマンドパレットの`Translate English to Japanese using Mirai Translator`を実行）
 
 ## Requirements (必要な環境)
 

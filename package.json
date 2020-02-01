@@ -23,7 +23,7 @@
 		"commands": [
 			{
 				"command": "extension.translate",
-				"title": "Translate from English to Japanese using Mirai Translator"
+				"title": "Translate English to Japanese using Mirai Translator"
 			}
 		]
 	},
