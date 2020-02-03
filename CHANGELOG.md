@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Translate Japanese to English. ([#5](https://github.com/zawataki/vscode-mirai-translator/issues/5))
 
 ## [1.0.8] - 2020-02-01
 - Remove extra word from the command title.

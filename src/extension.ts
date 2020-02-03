@@ -20,7 +20,14 @@ export function activate(context: vscode.ExtensionContext) {
 		translate(selectedText, LanguageEnum.ENGLISH, LanguageEnum.JAPANESE);
 	});
 
+	let disposable2 = vscode.commands.registerCommand('extension.translateJapanese2English', () => {
+		const textEditor = vscode.window.activeTextEditor;
+		const selectedText = textEditor?.document.getText(textEditor?.selection);
+		translate(selectedText, LanguageEnum.JAPANESE, LanguageEnum.ENGLISH);
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable2);
 }
 
 // this method is called when your extension is deactivated
