@@ -11,23 +11,24 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "mirai-translator" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.translate', () => {
+	const commandMap = new Map<string, (...args: any[]) => any>();
+
+	commandMap.set('extension.translate', () => {
 		const textEditor = vscode.window.activeTextEditor;
 		const selectedText = textEditor?.document.getText(textEditor?.selection);
 		translate(selectedText, LanguageEnum.ENGLISH, LanguageEnum.JAPANESE);
 	});
 
-	let disposable2 = vscode.commands.registerCommand('extension.translateJapanese2English', () => {
+	commandMap.set('extension.translateJapanese2English', () => {
 		const textEditor = vscode.window.activeTextEditor;
 		const selectedText = textEditor?.document.getText(textEditor?.selection);
 		translate(selectedText, LanguageEnum.JAPANESE, LanguageEnum.ENGLISH);
 	});
 
-	context.subscriptions.push(disposable);
-	context.subscriptions.push(disposable2);
+	commandMap.forEach((commandHandler, commandId) => {
+		let disposable = vscode.commands.registerCommand(commandId, commandHandler);
+		context.subscriptions.push(disposable);
+	});
 }
 
 // this method is called when your extension is deactivated
