@@ -11,6 +11,8 @@ Translate English text to Japanese using [みらい翻訳] (Mirai Translator) fr
 
 ![demo](images/demo.gif)
 
+The [icon](images/icon.png) made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com.
+
 [みらい翻訳]: https://miraitranslate.com/trial/
 
 ## Features (機能)
