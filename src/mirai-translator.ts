@@ -7,6 +7,21 @@ export enum LanguageEnum {
     ENGLISH = 'en',
 }
 
+/**
+ * Returns user settings proxy config
+ *
+ * @returns {string}
+ */
+function getProxy() {
+    const config = vscode.workspace.getConfiguration('miraiTranslator.proxy');
+
+    if (!config.get("host")) {
+        return null;
+    }
+
+    return `http://${config.get("username")}:${config.get("password")}@${config.get("host")}:${config.get("port")}`;
+}
+
 export function translate(textToBeTranslated: string | undefined, source: LanguageEnum,
     target: LanguageEnum) {
 
@@ -24,7 +39,10 @@ export function translate(textToBeTranslated: string | undefined, source: Langua
         method: 'GET'
     };
 
-    const req = request.defaults({ jar: true });
+    const req = request.defaults({
+        jar: true,
+        proxy: getProxy(),
+    });
 
     req(requestOptionsToGetCookie)
         .then(function (body: any) {
