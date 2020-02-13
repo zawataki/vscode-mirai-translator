@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { translate, LanguageEnum } from './mirai-translator';
+import { translate, LanguageEnum, enableProxy, disableProxy } from './mirai-translator';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -23,6 +23,14 @@ export function activate(context: vscode.ExtensionContext) {
 		const textEditor = vscode.window.activeTextEditor;
 		const selectedText = textEditor?.document.getText(textEditor?.selection);
 		translate(selectedText, LanguageEnum.JAPANESE, LanguageEnum.ENGLISH);
+	});
+
+	commandMap.set('extension.enableProxy', () => {
+		enableProxy();
+	});
+
+	commandMap.set('extension.disableProxy', () => {
+		disableProxy();
 	});
 
 	commandMap.forEach((commandHandler, commandId) => {

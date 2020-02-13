@@ -32,11 +32,11 @@
 			},
 			{
 				"command": "extension.enableProxy",
-				"title": "Enable proxty"
+				"title": "Enable proxy for Mirai Translator"
 			},
 			{
 				"command": "extension.disableProxy",
-				"title": "Disable proxty"
+				"title": "Disable proxy for Mirai Translator"
 			}
 		],
 		"configuration": {

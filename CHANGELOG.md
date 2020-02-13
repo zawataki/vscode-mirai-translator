@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Support proxy setting. ([#15](https://github.com/zawataki/vscode-mirai-translator/issues/15))
+- Support proxy. About how to use, see `README.md`. ([#15](https://github.com/zawataki/vscode-mirai-translator/issues/15))
 
 ## [1.1.1] - 2020-02-06
 ### Added

@@ -2,20 +2,30 @@ import * as request from 'request-promise';
 import * as vscode from 'vscode';
 const cheerio = require('cheerio');
 
+let proxyIsEnable: boolean = true;
+
+export function enableProxy() {
+    proxyIsEnable = true;
+}
+
+export function disableProxy() {
+    proxyIsEnable = false;
+}
+
 export enum LanguageEnum {
     JAPANESE = 'ja',
     ENGLISH = 'en',
 }
 
 /**
- * Returns user settings proxy config
+ * Returns proxy setting that a user configured
  *
- * @returns {string}
+ * @returns null if proxy is not configured
  */
-function getProxy() {
+function getProxy(): string | null {
     const config = vscode.workspace.getConfiguration('miraiTranslator.proxy');
 
-    if (!config.get("host")) {
+    if (!config.get("host") || !proxyIsEnable) {
         return null;
     }
 
