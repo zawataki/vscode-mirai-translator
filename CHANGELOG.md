@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support proxy. About how to use, see `README.md`. ([#15](https://github.com/zawataki/vscode-mirai-translator/issues/15))
 
 ## [1.1.1] - 2020-02-06
 ### Added

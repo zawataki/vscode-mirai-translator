@@ -29,8 +29,37 @@
 			{
 				"command": "extension.translateJapanese2English",
 				"title": "Translate Japanese to English using Mirai Translator"
+			},
+			{
+				"command": "extension.enableProxy",
+				"title": "Enable proxy for Mirai Translator"
+			},
+			{
+				"command": "extension.disableProxy",
+				"title": "Disable proxy for Mirai Translator"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Mirai Translator",
+			"properties": {
+				"miraiTranslator.proxy.host": {
+					"type": "string",
+					"markdownDescription": "The proxy host (set it to enable proxy)"
+				},
+				"miraiTranslator.proxy.port": {
+					"type": "string",
+					"markdownDescription": "The proxy port"
+				},
+				"miraiTranslator.proxy.username": {
+					"type": "string",
+					"markdownDescription": "The proxy username (optional)"
+				},
+				"miraiTranslator.proxy.password": {
+					"type": "string",
+					"markdownDescription": "The proxy password (optional)"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
