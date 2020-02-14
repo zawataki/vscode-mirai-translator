@@ -57,9 +57,11 @@ Nothing.
 
 ## Known Issues (既知の問題)
 
-See [issues](https://github.com/zawataki/vscode-mirai-translator/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+See [issues].
 
-> [issues](https://github.com/zawataki/vscode-mirai-translator/issues?q=is%3Aissue+is%3Aopen+label%3Abug) をご覧ください。
+> [issues] をご覧ください。
+
+[issues]: https://github.com/zawataki/vscode-mirai-translator/issues?q=is%3Aissue+is%3Aopen+label%3Abug+-label%3A%22no+user+impact%22
 
 ## Release Notes
 
