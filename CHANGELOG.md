@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Change the Issues link that displays under the Resources section of
+  the Visual Studio Code Marketplace.
 
 ## [1.3.0] - 2020-02-17
 ### Added
