@@ -2,7 +2,7 @@
 	"name": "mirai-translator",
 	"displayName": "Mirai Translator (みらい翻訳)",
 	"description": "Translate by high-precision machine translation service named Mirai Translator (みらい翻訳 という高精度な機械翻訳サービスによる翻訳)",
-	"version": "1.2.1",
+	"version": "1.3.0",
 	"publisher": "zawa",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"icon": "images/icon.png",
