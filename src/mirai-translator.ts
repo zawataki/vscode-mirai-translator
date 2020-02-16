@@ -54,38 +54,64 @@ export function translate(textToBeTranslated: string | undefined, source: Langua
         proxy: getProxy(),
     });
 
-    req(requestOptionsToGetCookie)
-        .then(function (body: any) {
-            const $ = cheerio.load(body);
-            const tranValue = $('input#tranInput').val();
+    vscode.window.withProgress({
+        location: vscode.ProgressLocation.Notification,
+        title: "Translating...",
+        cancellable: true
+    }, (progress, token) => {
+        token.onCancellationRequested(() => {
+            console.log("The translation was cancelled");
+        });
 
-            const requestOptionsToTranslate = {
-                url: 'https://miraitranslate.com/trial/translate.php',
-                method: 'POST',
-                form: {
-                    input: textToBeTranslated,
-                    source: source,
-                    target: target,
-                    tran: tranValue,
-                },
-            };
-            req(requestOptionsToTranslate)
+        progress.report({
+            increment: 0,
+            message: "Connecting to translation service..."
+        });
+
+        return new Promise<string>((resolve, reject) => {
+            req(requestOptionsToGetCookie)
                 .then(function (body: any) {
-                    console.log("Received body: ", body);
-                    const jsonBody = JSON.parse(body);
-                    if (jsonBody.status !== 'success') {
-                        throw new Error("Received error status from Mirai Translator");
-                    }
+                    const $ = cheerio.load(body);
+                    const tranValue = $('input#tranInput').val();
 
-                    vscode.window.showInformationMessage(jsonBody.outputs[0].output);
+                    progress.report({
+                        increment: 30,
+                        message: "Start translation"
+                    });
+
+                    const requestOptionsToTranslate = {
+                        url: 'https://miraitranslate.com/trial/translate.php',
+                        method: 'POST',
+                        form: {
+                            input: textToBeTranslated,
+                            source: source,
+                            target: target,
+                            tran: tranValue,
+                        },
+                    };
+                    req(requestOptionsToTranslate)
+                        .then(function (body: any) {
+                            console.log("Received body: ", body);
+                            const jsonBody = JSON.parse(body);
+                            if (jsonBody.status !== 'success') {
+                                throw new Error("Received error status from Mirai Translator");
+                            }
+
+                            resolve(jsonBody.outputs[0].output);
+                        })
+                        .catch(function (err: any) {
+                            console.error("Failed to translate.", err);
+                            reject(err);
+                        });
                 })
                 .catch(function (err: any) {
-                    console.error("Failed to post", err);
-                    vscode.window.showErrorMessage(`Failed to translate. ${err}`);
+                    console.error("Failed to connect.", err);
+                    reject(err);
                 });
-        })
-        .catch(function (err: any) {
-            console.error("Failed to get", err);
-            vscode.window.showErrorMessage(`Failed to translate. ${err}`);
         });
+    }).then((translatedText) => {
+        vscode.window.showInformationMessage(translatedText);
+    }, (reason) => {
+        vscode.window.showErrorMessage(`Failed to translate. ${reason}`);
+    });
 }
