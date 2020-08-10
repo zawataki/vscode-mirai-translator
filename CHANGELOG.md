@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.3] - 2020-08-10
+### Fixed
+- Fix [#10](https://github.com/zawataki/vscode-mirai-translator/issues/10).
+
 ## [1.3.2] - 2020-08-10
 ### Security
 - Upgrade dependencies to fix a potential security vulnerability.
@@ -69,7 +73,8 @@ Initial release
 ### Added
 - A command to translate English text to Japanese using [みらい翻訳](https://miraitranslate.com/trial/). The command shows in the Command Palette of Visual Studio Code.
 
-[Unreleased]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.3.2...HEAD
+[Unreleased]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.3.3...HEAD
+[1.3.3]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.3.2...v1.3.3
 [1.3.2]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.3.1...v1.3.2
 [1.3.1]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/zawataki/vscode-mirai-translator/compare/v1.2.1...v1.3.0
