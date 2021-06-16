@@ -1,3 +1,6 @@
+# Important Announce
+This VS Code extension has been deprecated because there is a more powerful translator [DeepL](https://www.deepl.com/translator) now.
+
 # みらい翻訳 for VS Code
 
 [![Published version](https://vsmarketplacebadge.apphb.com/version/zawa.mirai-translator.svg)](https://marketplace.visualstudio.com/items?itemName=zawa.mirai-translator)
